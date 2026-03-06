@@ -1,0 +1,24 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 930 235"
+    width="480"
+    height=""
+>
+  <defs>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b4c8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0097a7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Teal shape with wave cut at bottom -->
+  <path
+        d="M 0 0
+       L 930 0
+       L 930 180
+       C 750 185, 560 240, 370 220
+       C 200 200, 80 195, 0 230
+       Z"
+        fill="url(#tealGrad)"
+    />
+</svg>

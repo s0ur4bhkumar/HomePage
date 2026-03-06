@@ -1,6 +1,81 @@
-*{
+* {
     border: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --font-size: 2vh;
+    --div-height: 5vh;
+    --div-width: 5vh
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header,
+main,
+footer {
+    border: 1px solid red;
+    flex: 1;
+    min-width: 70vh;
+    min-height: 30vh;
+}
+header {
+    background-color: transparent;
+    display: flex;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 36px 24px 24px 24px;
+}
+
+a {
+    height: 25px;
+    width: 25px;
+}
+
+.profilePic {
+    background-image: url(/src/assets/pexels-262756269-36076127.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 33vh;
+    min-width: 35vh;
+    left: -12px;
+    top: -12px;
+    z-index: 3;
+}
+.description {
+    display: flex;
+    font-size: var(--font-size);
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    justify-content: space-between;
+    z-index: 2;
+}
+.profilePic > p {
+    position: relative;
+    z-index: 2;
+    top: 90%;
+    left: 25%;
+    font-weight: bold;
+    font-size: 2vh;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.github {
+    background-image: url(/src/assets/github-original.svg);
 }
 

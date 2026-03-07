@@ -7,32 +7,40 @@
 :root {
     --font-size: 2vh;
     --div-height: 5vh;
-    --div-width: 5vh
+    --div-width: 5vh;
+    --profilePic-height: 300px;
+    --profilePic-width: 300px;
+    --projectSnap-height: 100px;
+    --projectSnap-width: 100px;
+    --content-margin: 5rem 10rem 0 10rem;
 }
-
 html,
 body {
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    /*overflow-x: hidden;*/
 }
 
 header,
 main,
 footer {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     flex: 1;
-    min-width: 70vh;
-    min-height: 30vh;
+    /*min-width: 70vh;*/
+    /*min-height: 30vh;*/
 }
 header {
     background-color: transparent;
     display: flex;
+    padding: var(--content-margin);
 }
 
 body {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    padding: 36px 24px 24px 24px;
+    gap: 2vh;
+    justify-content: center;
+    background-color: rgb(30, 32, 33);
 }
 
 a {
@@ -45,8 +53,8 @@ a {
     background-size: cover;
     background-position: center;
     position: relative;
-    min-height: 33vh;
-    min-width: 35vh;
+    min-height: var(--profilePic-height);
+    min-width: var(--profilePic-width);
     left: -12px;
     top: -12px;
     z-index: 3;
@@ -77,5 +85,114 @@ a {
 
 .github {
     background-image: url(/src/assets/github-original.svg);
+    background-repeat: no-repeat;
 }
 
+h3 {
+    display: block;
+    margin-left: 10rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1em;
+    padding: var(--content-margin);
+    padding-top: 0;
+    min-height: 70vh;
+    flex: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition-property: transform;
+    transition-delay: 0.5ms;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.card:hover {
+    transform: scale(120%);
+    backdrop-filter: blur(10px);
+}
+
+.project-snapshot {
+    background-image: url(/src/assets/pexels-adrianlimani-34693090.jpg);
+    background-size: cover;
+    min-height: var(--projectSnap-height);
+    min-width: var(--projectSnap-width);
+    flex: 1;
+}
+
+.project-meta-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.project-description {
+    padding: 4px;
+}
+
+footer {
+    margin-top: 12px;
+    padding: var(--content-margin);
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+}
+
+footer .links {
+    justify-content: flex-start;
+}
+
+footer .profilePic {
+    top: 0;
+    left: 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.email,
+.telephone {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.email a,
+.telephone a {
+    background-image: url(/src/assets/email.svg);
+    height: 25px;
+    display: block;
+}
+
+.telephone a {
+    background-image: url(/src/assets/phone-outline.svg);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+footer h3 {
+    text-align: center;
+    margin: 0;
+}

@@ -5,6 +5,7 @@ export default {
   devServer: {
     hot: true,
     port: 3000,
+    open: true,
     watchFiles: path.resolve(import.meta.dirname, "../src/template.html"),
   },
 };
